@@ -24,7 +24,8 @@ const initialState: TemplatesState = {
 };
 
 export const fetchTemplates = createAsyncThunk('templates/fetchTemplates', async () => {
-  const response = await axios.get('https://wh153ef199994821ab9e.free.beeceptor.com/template');
+  const url = "https://wh153ef199994821ab9e.free.beeceptor.com/template";
+  const response = await axios.get(url);
   // Ensure the data contains category and dateCreated fields
   return response.data.map((template: any) => ({
     id: template.id,
