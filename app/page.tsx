@@ -64,7 +64,7 @@ const Home = () => {
       <div className="flex items-center justify-center gap-4 bg-orange-100 text-gray-900 p-2 rounded mb-8">
         <HiOutlineInformationCircle className='text-orange-600 text-4xl md:text-3xl' />
         <p className='text-xs text-center'>
-          Tada! Get started with a free template. Can't find what you are looking for? Search from the
+          Tada! Get started with a free template. Can&apos;t find what you are looking for? Search from the
           1000+ available templates.
         </p>
       </div>
