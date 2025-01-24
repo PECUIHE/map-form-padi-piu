@@ -36,7 +36,7 @@ const Home = () => {
       if (sortOption === 'Alphabetical') {
         return a.name.localeCompare(b.name);
       } else if (sortOption === 'Date Created') {
-        return new Date(a.dateCreated).getTime() - new Date(b.dateCreated).getTime();
+        return new Date(a.created).getTime() - new Date(b.created).getTime();
       }
       return 0; // Default sorting
     });
@@ -93,7 +93,7 @@ const Home = () => {
                 name={template.name}
                 description={template.description}
                 category={template.category}
-                dateCreated={template.dateCreated}
+                created={template.created}
               />
             ))}
           </div>

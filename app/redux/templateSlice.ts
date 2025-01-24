@@ -2,20 +2,8 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { Template, TemplatesState } from '../types/template';
 
-interface Template {
-  id: string;
-  name: string;
-  description: string;
-  category: string[];
-  dateCreated: string;
-}
-
-interface TemplatesState {
-  templates: Template[];
-  loading: boolean;
-  error: string | null;
-}
 
 const initialState: TemplatesState = {
   templates: [],
@@ -23,16 +11,18 @@ const initialState: TemplatesState = {
   error: null,
 };
 
+
+
 export const fetchTemplates = createAsyncThunk('templates/fetchTemplates', async () => {
   const url = "https://wh153ef199994821ab9e.free.beeceptor.com/template";
   const response = await axios.get(url);
   // Ensure the data contains category and dateCreated fields
-  return response.data.map((template: { id: any; name: any; description: any; category: any; created: any; }) => ({
+  return response.data.map((template: Template) => ({
     id: template.id,
     name: template.name,
     description: template.description,
     category: template.category || 'Uncategorized', // Default category if missing
-    dateCreated: template.created || new Date().toISOString(), // Default to current date if missing
+    created: template.created || new Date().toISOString(), // Default to current date if missing
   }));
 });
 
