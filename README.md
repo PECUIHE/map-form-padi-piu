@@ -1,3 +1,14 @@
+### A Nextjs App 
+
+This is a Form Padi (A Template Searcher App).
+
+This project is for MAP (MatirksHub Apprehentenship Programme) assessment.
+
+This is to test my knowledge with Nextjs (react framework), redux (for state management) and axios (for API integration/management).
+
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
