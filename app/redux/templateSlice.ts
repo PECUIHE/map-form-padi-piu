@@ -4,15 +4,13 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Template, TemplatesState } from '../types/template';
 
-
 const initialState: TemplatesState = {
   templates: [],
   loading: false,
   error: null,
 };
 
-
-
+// Fetch templates from the API 
 export const fetchTemplates = createAsyncThunk('templates/fetchTemplates', async () => {
   const url = "https://wh153ef199994821ab9e.free.beeceptor.com/template";
   const response = await axios.get(url);

@@ -31,3 +31,9 @@ a {
 ul {
   text-decoration: none;
 }
+
+.options:hover {
+  background-color: green !important;
+  color: white;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@ import TemplateCard from './components/TemplateCard';
 import Loading from './components/Loading';
 import ErrorHandler from './components/ErrorHandler';
 import Pagination from './components/Pagination';
-import SearchBar from './components/SearchFilter';
+import SearchFilter from './components/SearchFilter';
 import { HiOutlineInformationCircle } from 'react-icons/hi2';
 
 const Home = () => {
@@ -51,7 +51,7 @@ const Home = () => {
     <div className="min-h-screen bg-gray-100 text-black/80 p-8">
 
       {/* Search and Filters */}
-      <SearchBar
+      <SearchFilter
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         categoryFilter={categoryFilter}
@@ -71,11 +71,11 @@ const Home = () => {
 
       <div className='p-4 flex items-center justify-between'>
         {/* Templates based on Category */}
-        <p className="mb-4">
+        <p className="mb-4 text-[14px]">
           {categoryFilter} Templates
         </p>
         {/* No of Templates Found in Each Category */}
-        <p className="mb-4">
+        <p className="mb-4 text-[14px]">
           {filteredTemplates.length} Templates Found
         </p>
       </div>
